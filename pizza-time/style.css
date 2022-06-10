@@ -1,7 +1,7 @@
 #toppings1 {
   width: 500px;
   height: 500px;
-  background-image: url("https://assets.codepen.io/6306176/pizza-pepperoni.png");
+  background-image: url("https://assets.codepen.io/6306176/pizza-cheese3.png"), url("https://assets.codepen.io/6306176/pizza-veggie.png"), url("https://assets.codepen.io/6306176/pizza-pepperoni.png");
 }
 
 /* basic pizza */

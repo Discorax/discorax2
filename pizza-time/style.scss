@@ -13,7 +13,7 @@ $pepperoni: url("https://assets.codepen.io/6306176/pizza-pepperoni.png");
 
 
 #toppings1 {
-  @include toppings($pepperoni);
+  @include toppings($cheese, $veggie, $pepperoni);
 }
 
 

@@ -5,7 +5,7 @@ function addCheese() {
     //console.log(theToppings["background-image"]); 
 
     var toppingsString = theToppings["background-image"];
-    var newToppings = toppingsString + "," + "url('https://assets.codepen.io/6306176/pizza-cheese3.png')";
+    var newToppings = "url('https://assets.codepen.io/6306176/pizza-cheese3.png'),"+ toppingsString  ;
     toppingsPizza.style.backgroundImage = newToppings;
 
 }
