@@ -1,0 +1,153 @@
+$bkgd-color: #e5ddc8;
+$text-light: #f2f2f2;
+$logo-color: #db1f48;
+$primary-color: #004369;
+$secondary-color: #01949a;
+$double-border: 10px double $secondary-color;
+$radius: 10px;
+$std-space: 1rem;
+body {
+    font-family: "Hammersmith One", sans-serif;
+    background-color: $bkgd-color;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+a {
+    color: $text-light;
+    &:hover {
+        text-decoration: none;
+        color: $logo-color;
+    }
+}
+
+h1 {
+    font-family: "Notable", sans-serif;
+    color: $logo-color;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: $primary-color;
+        text-align: center;
+        border-top: $double-border;
+        border-bottom: $double-border;
+    }
+    a {
+        color: #ffffff;
+        display: block;
+        padding: $std-space / 2;
+        text-decoration: none;
+        &:hover {
+            color: $bkgd-color;
+        }
+    }
+}
+
+.bkgdimg {
+    background: url(../media/images/jakes-meals.jpg) repeat-x;
+    height: 250px;
+}
+
+article {
+    padding: $std-space;
+}
+
+.card {
+    border-radius: $radius;
+    border: 2px solid $primary-color;
+    background-color: #eeffff;
+    /* this keeps the card no wider than the photo */
+    max-width: 500px;
+    margin: $std-space auto;
+    h3,
+    p {
+        padding: 0 $std-space / 2;
+    }
+}
+
+section {
+    padding: $std-space;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        display: block;
+        background-color: $logo-color;
+        padding: $std-space / 2;
+        border-radius: $radius;
+        color: #ffffff;
+        text-decoration: none;
+        border: 1px solid $logo-color;
+        margin-bottom: $std-space;
+        text-align: center;
+        &:hover {
+            background-color: #ffffff;
+            color: $logo-color;
+            border: 1px solid $logo-color;
+        }
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    color: #ffffff;
+    padding: $std-space;
+    text-align: center;
+    border-top: $double-border;
+    margin-top: $std-space * 3;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        a {
+            font-size: 2rem;
+            display: block;
+            margin: 0 $std-space 3rem $std-space;
+            &:hover {
+                color: $logo-color;
+            }
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    /* because section and article are combined, they can't be nested. */
+    section,
+    article {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    section li {
+        display: inline-block;
+        margin-right: $std-space;
+    }
+    nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .card-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .card {
+        flex-basis: 30%;
+        margin: 0;
+    }
+}
