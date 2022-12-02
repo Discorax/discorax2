@@ -5,11 +5,12 @@ $primary-color: #004369;
 $secondary-color: #01949a;
 $double-border: 10px double $secondary-color;
 $radius: 10px;
-$std-space: 1rem;
+$std-space: 1rem; 
 
-@mixin boxmodel($margin, $padding){
+@mixin boxmodel($margin: 0, $padding: 0){
     margin: $margin;
     padding: $padding;
+    
 }
 
 @mixin flex-flow-layout($flex-flow, $justify-content){
@@ -18,14 +19,12 @@ $std-space: 1rem;
     justify-content: $justify-content;
 }
 
-
-
-@mixin 
 body {
     font-family: "Hammersmith One", sans-serif;
     background-color: $bkgd-color;
-    @include boxmodel(0,0);
+    @include boxmodel($padding:5rem);
     line-height: 1.5;
+    
 }
 
 a {
@@ -147,7 +146,7 @@ footer {
     section,
     article {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 0 auto; 
     }
     section li {
         display: inline-block;
@@ -161,6 +160,7 @@ footer {
         @include flex-flow-layout (row wrap, space-between);
     }
     .card {
+       
         flex-basis: 30%;
         margin: 0;
     }
